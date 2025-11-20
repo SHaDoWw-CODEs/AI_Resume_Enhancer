@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease-in-out;
+}
+
+/* LIGHT MODE */
+:root {
+  --bg: #f5f5f5;
+  --text: #111;
+  --card: rgba(255, 255, 255, 0.85);
+  --border: rgba(0,0,0,0.1);
+}
+
+/* DARK MODE */
+.dark {
+  --bg: #0d0d0d;
+  --text: #fff;
+  --card: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.15);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dark-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 40px;
+}
+
+.hero-text h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.hero-img {
+  width: 320px;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* MAIN CARD */
+.card {
+  width: 90%;
+  max-width: 650px;
+  background: var(--card);
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.main-btn {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.main-btn:hover {
+  background: #3730A3;
+}
+
+/* OUTPUT BEAUTIFICATION */
+.output-box {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  max-height: 550px;
+  overflow-y: auto;
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.output-box h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #4F46E5;
+}
+
+.output-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(79,70,229,0.08);
+  border-left: 4px solid #4F46E5;
+  border-radius: 10px;
+}
+
+.output-section h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #4F46E5;
+  font-weight: 600;
+}
+
+.output-section p,
+.output-section li {
+  opacity: 0.85;
+  margin: 4px 0;
+}
+
+.output-box ul {
+  margin: 10px 0 10px 20px;
+}
+
+/* REVIEWS */
+.reviews {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.review-box {
+  background: var(--card);
+  width: 60%;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.fade-in {
+  animation: fade 1.2s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* FOOTER */
+footer {
+  padding: 15px;
+  text-align: center;
+  opacity: 0.7;
+  margin-top: 40px;
+}
+
+
